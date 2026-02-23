@@ -22,7 +22,7 @@ dependencies:
   hive: ^2.2.3
   
   # Prayer Times Calculation
-  adhan_dart: ^2.0.0+2
+  adhan: ^2.1.2
   
   # Qibla Direction
   flutter_qiblah: ^3.2.0
