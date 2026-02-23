@@ -3,7 +3,7 @@ name: Deploy Flutter Web
 on:
   push:
     branches:
-      - main  # Make sure this matches your default branch name
+      - main  # Confirm your branch is named 'main' and not 'master'
 
 jobs:
   build:
@@ -16,8 +16,7 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          # This matches your pubspec.yaml requirement
-          flutter-version: '3.41.0' 
+          flutter-version: '3.27.0' # Using a stable version known to work with Dart 3.6.0
           channel: 'stable'
 
       - name: Install dependencies
