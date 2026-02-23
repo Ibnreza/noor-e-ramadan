@@ -1,3 +1,12 @@
+name: ramadan_app
+description: "Noor Ramadan - The #1 Islamic App for 2026."
+publish_to: 'none'
+version: 2.0.0+2026
+
+environment:
+  sdk: '>=3.6.0 <4.0.0'
+  flutter: '>=3.41.0'
+  
 dependencies:
   flutter:
     sdk: flutter
