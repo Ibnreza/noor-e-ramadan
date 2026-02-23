@@ -1,0 +1,225 @@
+{
+  "@@locale": "en",
+  "@@context": "Noor Ramadan App - English Localization",
+  
+  "appName": "Noor Ramadan",
+  "appTagline": "Your Offline Ramadan Companion",
+  
+  "navigation": {
+    "home": "Home",
+    "prayerTimes": "Prayer Times",
+    "tasbih": "Tasbih",
+    "qibla": "Qibla",
+    "calendar": "Calendar",
+    "settings": "Settings"
+  },
+  
+  "home": {
+    "ramadanMubarak": "Ramadan Mubarak",
+    "day": "Day",
+    "timeUntilIftar": "Time until Iftar",
+    "timeUntilSuhoor": "Time until Suhoor",
+    "dayStreak": "Day Streak",
+    "best": "Best",
+    "nextPrayer": "Next Prayer",
+    "current": "Current",
+    "dailyDua": "Daily Dua",
+    "copy": "Copy",
+    "todaysStats": "Today's Stats",
+    "totalFasts": "Total Fasts",
+    "dhikr": "Dhikr",
+    "recentBadges": "Recent Badges",
+    "seeAll": "See All"
+  },
+  
+  "prayer": {
+    "fajr": "Fajr",
+    "sunrise": "Sunrise",
+    "dhuhr": "Dhuhr",
+    "asr": "Asr",
+    "maghrib": "Maghrib",
+    "isha": "Isha",
+    "imsak": "Imsak",
+    "today": "Today",
+    "notificationSettings": "Notification Settings",
+    "prayerNotifications": "Prayer Notifications",
+    "prayerNotificationsDesc": "Get notified at prayer times",
+    "prePrayerReminders": "Pre-Prayer Reminders",
+    "prePrayerRemindersDesc": "{minutes} minutes before",
+    "fastingNotifications": "Fasting Notifications",
+    "fastingNotificationsDesc": "Suhoor and Iftar notifications",
+    "vibration": "Vibration",
+    "vibrationDesc": "Vibrate on notifications",
+    "location": "Location",
+    "calculationMethod": "Calculation Method"
+  },
+  
+  "tasbih": {
+    "title": "Tasbih",
+    "statistics": "Statistics",
+    "settings": "Settings",
+    "tapToCount": "Tap to count",
+    "reset": "Reset",
+    "resetConfirmation": "Reset Counter?",
+    "resetConfirmationDesc": "Your current count will be saved.",
+    "cancel": "Cancel",
+    "selectTarget": "Select Target",
+    "todaysDhikr": "Today's Dhikr",
+    "todaysSessions": "Today's Sessions",
+    "goalsReached": "Goals Reached",
+    "allTimeTotal": "All Time Total",
+    "vibrationSetting": "Vibration",
+    "vibrationSettingDesc": "Vibrate on count",
+    "ok": "OK",
+    "close": "Close"
+  },
+  
+  "dhikr": {
+    "allah": "Allah",
+    "subhanAllah": "SubhanAllah",
+    "alhamdulillah": "Alhamdulillah",
+    "allahuAkbar": "Allahu Akbar",
+    "astaghfirullah": "Astaghfirullah",
+    "laIlahaIllallah": "La ilaha illallah",
+    "salawat": "Salawat",
+    "hasbunallahu": "Hasbunallahu",
+    "bismillah": "Bismillah",
+    "laHawla": "La hawla wa la quwwata",
+    "subhanAllahi": "SubhanAllahi wa bihamdihi",
+    "rabbanaghfirli": "Rabbanaghfir li",
+    "allahummaAmin": "Allahumma Amin",
+    "tahmid": "Tahmid",
+    "takbir": "Takbir",
+    "tasbih": "Tasbih"
+  },
+  
+  "qibla": {
+    "title": "Qibla Compass",
+    "calibrating": "Calibrating compass...",
+    "permissionRequired": "Location Permission Required",
+    "permissionDesc": "We need your location to determine the Qibla direction.",
+    "grantPermission": "Grant Permission",
+    "tryAgain": "Try Again",
+    "facingQibla": "Facing Qibla",
+    "qibla": "Qibla",
+    "accuracy": "Accuracy",
+    "instructions": "Rotate your phone slowly until the green arrow aligns with the black arrow"
+  },
+  
+  "calendar": {
+    "title": "Ramadan Calendar",
+    "ramadanAH": "Ramadan 1447 AH",
+    "totalDays": "Total Days",
+    "day": "Day",
+    "date": "Date",
+    "sahari": "Sahari",
+    "iftar": "Iftar"
+  },
+  
+  "settings": {
+    "title": "Settings",
+    "language": "Language",
+    "location": "Location",
+    "calculationMethod": "Calculation Method",
+    "display": "Display",
+    "about": "About",
+    "english": "English",
+    "bangla": "বাংলা",
+    "hourFormat24": "24-Hour Format",
+    "showArabic": "Show Arabic",
+    "showArabicDesc": "Arabic text in prayer times",
+    "showTransliteration": "Show Transliteration",
+    "karachi": "Karachi (Hanafi)",
+    "makkah": "Makkah",
+    "egypt": "Egypt"
+  },
+  
+  "badges": {
+    "unlocked": "Badge Unlocked!",
+    "awesome": "Awesome!",
+    "points": "points",
+    
+    "firstFast": "First Fast",
+    "firstFastDesc": "Complete your first fast of Ramadan",
+    "weekWarrior": "Week Warrior",
+    "weekWarriorDesc": "Fast for 7 consecutive days",
+    "halfwayHero": "Halfway Hero",
+    "halfwayHeroDesc": "Complete 15 days of fasting",
+    "ramadanChampion": "Ramadan Champion",
+    "ramadanChampionDesc": "Complete the entire month of Ramadan",
+    
+    "firstPrayer": "First Prayer",
+    "firstPrayerDesc": "Track your first prayer",
+    "dailyDevotee": "Daily Devotee",
+    "dailyDevoteeDesc": "Complete all 5 daily prayers",
+    "centuryOfPrayers": "Century of Prayers",
+    "centuryOfPrayersDesc": "Track 100 prayers",
+    
+    "dhikrBeginner": "Dhikr Beginner",
+    "dhikrBeginnerDesc": "Complete 33 dhikr in one session",
+    "dhikrDevotee": "Dhikr Devotee",
+    "dhikrDevoteeDesc": "Complete 100 dhikr in one session",
+    "dhikrMaster": "Dhikr Master",
+    "dhikrMasterDesc": "Complete 1000 dhikr in one day",
+    "dhikrCollector": "Dhikr Collector",
+    "dhikrCollectorDesc": "Use all 15+ dhikr types",
+    
+    "streak3": "3-Day Streak",
+    "streak3Desc": "Maintain a 3-day fasting streak",
+    "streak7": "Week Streak",
+    "streak7Desc": "Maintain a 7-day fasting streak",
+    "streak14": "Fortnight Flame",
+    "streak14Desc": "Maintain a 14-day fasting streak",
+    "streak30": "Unstoppable",
+    "streak30Desc": "Maintain a 30-day fasting streak",
+    
+    "firstDirection": "First Direction",
+    "firstDirectionDesc": "Find Qibla for the first time",
+    "directionMaster": "Direction Master",
+    "directionMasterDesc": "Find Qibla 10 times",
+    
+    "nightOfPower": "Night of Power",
+    "nightOfPowerDesc": "Pray on Laylatul Qadr",
+    "jumuahMubarak": "Jumuah Mubarak",
+    "jumuahMubarakDesc": "Complete Jumuah prayer during Ramadan",
+    "earlyBird": "Early Bird",
+    "earlyBirdDesc": "Use the app before Fajr for 7 days",
+    "spreadBlessing": "Spread the Blessing",
+    "spreadBlessingDesc": "Share your progress with friends"
+  },
+  
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "delete": "Delete",
+    "edit": "Edit",
+    "done": "Done",
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "yes": "Yes",
+    "no": "No",
+    "ok": "OK"
+  },
+  
+  "levels": {
+    "seeker": "Seeker",
+    "learner": "Learner",
+    "practitioner": "Practitioner",
+    "devotee": "Devotee",
+    "dedicated": "Dedicated",
+    "committed": "Committed",
+    "righteous": "Righteous",
+    "pious": "Pious",
+    "virtuous": "Virtuous",
+    "enlightened": "Enlightened"
+  },
+  
+  "about": {
+    "version": "Version 2.0.0",
+    "description": "An offline Ramadan companion app made for Bangladesh",
+    "offline": "Offline",
+    "adFree": "Ad-Free",
+    "privacyFirst": "Privacy-First"
+  }
+}

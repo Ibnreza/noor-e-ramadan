@@ -1,0 +1,225 @@
+{
+  "@@locale": "bn",
+  "@@context": "Noor Ramadan App - Bangla Localization",
+  
+  "appName": "নূর রমজান",
+  "appTagline": "আপনার অফলাইন রমজান সঙ্গী",
+  
+  "navigation": {
+    "home": "হোম",
+    "prayerTimes": "নামাজের সময়",
+    "tasbih": "তাসবিহ",
+    "qibla": "কিবলা",
+    "calendar": "ক্যালেন্ডার",
+    "settings": "সেটিংস"
+  },
+  
+  "home": {
+    "ramadanMubarak": "রমজান মুবারক",
+    "day": "দিন",
+    "timeUntilIftar": "ইফতারের সময় বাকি",
+    "timeUntilSuhoor": "সেহরির সময় বাকি",
+    "dayStreak": "দিনের ধারা",
+    "best": "সেরা",
+    "nextPrayer": "পরবর্তী নামাজ",
+    "current": "বর্তমান",
+    "dailyDua": "দৈনিক দোয়া",
+    "copy": "কপি করুন",
+    "todaysStats": "আজকের পরিসংখ্যান",
+    "totalFasts": "মোট রোজা",
+    "dhikr": "জিকির",
+    "recentBadges": "সাম্প্রতিক ব্যাজ",
+    "seeAll": "সব দেখুন"
+  },
+  
+  "prayer": {
+    "fajr": "ফজর",
+    "sunrise": "সূর্যোদয়",
+    "dhuhr": "যোহর",
+    "asr": "আসর",
+    "maghrib": "মাগরিব",
+    "isha": "এশা",
+    "imsak": "ইমসাক",
+    "today": "আজ",
+    "notificationSettings": "নোটিফিকেশন সেটিংস",
+    "prayerNotifications": "নামাজের নোটিফিকেশন",
+    "prayerNotificationsDesc": "প্রতিটি নামাজের সময় নোটিফিকেশন পান",
+    "prePrayerReminders": "পূর্ব নোটিফিকেশন",
+    "prePrayerRemindersDesc": "{minutes} মিনিট আগে রিমাইন্ডার",
+    "fastingNotifications": "রোজার নোটিফিকেশন",
+    "fastingNotificationsDesc": "সেহরি ও ইফতারের নোটিফিকেশন",
+    "vibration": "ভাইব্রেশন",
+    "vibrationDesc": "নোটিফিকেশনের সময় ভাইব্রেট করুন",
+    "location": "অবস্থান",
+    "calculationMethod": "গণনা পদ্ধতি"
+  },
+  
+  "tasbih": {
+    "title": "তাসবিহ",
+    "statistics": "পরিসংখ্যান",
+    "settings": "সেটিংস",
+    "tapToCount": "গণনা করতে ট্যাপ করুন",
+    "reset": "রিসেট",
+    "resetConfirmation": "রিসেট করবেন?",
+    "resetConfirmationDesc": "আপনার বর্তমান গণনা সংরক্ষণ করা হবে।",
+    "cancel": "বাতিল",
+    "selectTarget": "লক্ষ্য নির্বাচন করুন",
+    "todaysDhikr": "আজকের জিকির",
+    "todaysSessions": "আজকের সেশন",
+    "goalsReached": "লক্ষ্য পূরণ",
+    "allTimeTotal": "সর্বমোট জিকির",
+    "vibrationSetting": "ভাইব্রেশন",
+    "vibrationSettingDesc": "গণনার সময় ভাইব্রেট করুন",
+    "ok": "ঠিক আছে",
+    "close": "বন্ধ করুন"
+  },
+  
+  "dhikr": {
+    "allah": "আল্লাহ",
+    "subhanAllah": "সুবহানআল্লাহ",
+    "alhamdulillah": "আলহামদুলিল্লাহ",
+    "allahuAkbar": "আল্লাহু আকবর",
+    "astaghfirullah": "আস্তাগফিরুল্লাহ",
+    "laIlahaIllallah": "লা ইলাহা ইল্লাল্লাহ",
+    "salawat": "সালাত",
+    "hasbunallahu": "হাসবুনাল্লাহু",
+    "bismillah": "বিসমিল্লাহ",
+    "laHawla": "লা হাওলা ওয়ালা কুওয়াতা",
+    "subhanAllahi": "সুবহানাল্লাহি ওয়া বিহামদিহি",
+    "rabbanaghfirli": "রাব্বনাগফির লি",
+    "allahummaAmin": "আল্লাহুম্মা আমিন",
+    "tahmid": "তাহমিদ",
+    "takbir": "তাকবির",
+    "tasbih": "তাসবিহ"
+  },
+  
+  "qibla": {
+    "title": "কিবলা কম্পাস",
+    "calibrating": "কম্পাস ক্যালিব্রেট করা হচ্ছে...",
+    "permissionRequired": "অবস্থান অনুমতি প্রয়োজন",
+    "permissionDesc": "কিবলা দিকনির্ণয় করতে আমাদের আপনার অবস্থান জানতে হবে।",
+    "grantPermission": "অনুমতি দিন",
+    "tryAgain": "আবার চেষ্টা করুন",
+    "facingQibla": "কিবলার দিকে আছেন",
+    "qibla": "কিবলা",
+    "accuracy": "নির্ভুলতা",
+    "instructions": "ফোনটি ধীরে ধীরে ঘোরান যতক্ষণ না সবুজ তীর কালো তীরের সাথে মিলে যায়"
+  },
+  
+  "calendar": {
+    "title": "রমজান ক্যালেন্ডার",
+    "ramadanAH": "রমজান ১৪৪৭ হিজরি",
+    "totalDays": "মোট দিন",
+    "day": "দিন",
+    "date": "তারিখ",
+    "sahari": "সেহরি",
+    "iftar": "ইফতার"
+  },
+  
+  "settings": {
+    "title": "সেটিংস",
+    "language": "ভাষা",
+    "location": "অবস্থান",
+    "calculationMethod": "গণনা পদ্ধতি",
+    "display": "ডিসপ্লে",
+    "about": "অ্যাপ সম্পর্কে",
+    "english": "English",
+    "bangla": "বাংলা",
+    "hourFormat24": "২৪ ঘণ্টা ফরম্যাট",
+    "showArabic": "আরবি দেখান",
+    "showArabicDesc": "নামাজের সময়ে আরবি টেক্সট",
+    "showTransliteration": "উচ্চারণ দেখান",
+    "karachi": "করাচি (হানাফি)",
+    "makkah": "মক্কা",
+    "egypt": "মিশর"
+  },
+  
+  "badges": {
+    "unlocked": "ব্যাজ আনলক হয়েছে!",
+    "awesome": "দারুন!",
+    "points": "পয়েন্ট",
+    
+    "firstFast": "প্রথম রোজা",
+    "firstFastDesc": "রমজানের প্রথম রোজা সম্পন্ন করুন",
+    "weekWarrior": "সপ্তাহের যোদ্ধা",
+    "weekWarriorDesc": "৭ দিন ধারাবাহিকভাবে রোজা রাখুন",
+    "halfwayHero": "অর্ধেক নায়ক",
+    "halfwayHeroDesc": "১৫ দিন রোজা সম্পন্ন করুন",
+    "ramadanChampion": "রমজান চ্যাম্পিয়ন",
+    "ramadanChampionDesc": "পুরো রমজান মাস রোজা রাখুন",
+    
+    "firstPrayer": "প্রথম নামাজ",
+    "firstPrayerDesc": "আপনার প্রথম নামাজ ট্র্যাক করুন",
+    "dailyDevotee": "দৈনিক ভক্ত",
+    "dailyDevoteeDesc": "দৈনিক ৫ ওয়াক্ত নামাজ আদায় করুন",
+    "centuryOfPrayers": "শত নামাজ",
+    "centuryOfPrayersDesc": "১০০টি নামাজ ট্র্যাক করুন",
+    
+    "dhikrBeginner": "জিকির শিক্ষার্থী",
+    "dhikrBeginnerDesc": "এক অধিবেশনে ৩৩ জিকির সম্পন্ন করুন",
+    "dhikrDevotee": "জিকির ভক্ত",
+    "dhikrDevoteeDesc": "এক অধিবেশনে ১০০ জিকির সম্পন্ন করুন",
+    "dhikrMaster": "জিকির মাস্টার",
+    "dhikrMasterDesc": "একদিনে ১০০০ জিকির সম্পন্ন করুন",
+    "dhikrCollector": "জিকির সংগ্রাহক",
+    "dhikrCollectorDesc": "সব ১৫+ জিকির প্রকার ব্যবহার করুন",
+    
+    "streak3": "৩-দিনের ধারাবাহিকতা",
+    "streak3Desc": "৩ দিনের রোজা ধারাবাহিকতা বজায় রাখুন",
+    "streak7": "সপ্তাহের ধারাবাহিকতা",
+    "streak7Desc": "৭ দিনের রোজা ধারাবাহিকতা বজায় রাখুন",
+    "streak14": "পক্ষকালের আগুন",
+    "streak14Desc": "১৪ দিনের রোজা ধারাবাহিকতা বজায় রাখুন",
+    "streak30": "অপ্রতিরোধ্য",
+    "streak30Desc": "৩০ দিনের রোজা ধারাবাহিকতা বজায় রাখুন",
+    
+    "firstDirection": "প্রথম দিকনির্ণয়",
+    "firstDirectionDesc": "প্রথমবার কিবলা খুঁজুন",
+    "directionMaster": "দিকনির্ণয় মাস্টার",
+    "directionMasterDesc": "১০ বার কিবলা খুঁজুন",
+    
+    "nightOfPower": "লাইলাতুল কদর",
+    "nightOfPowerDesc": "লাইলাতুল কদরে নামাজ আদায় করুন",
+    "jumuahMubarak": "জুমুআহ মুবারক",
+    "jumuahMubarakDesc": "রমজানে জুমুআহ নামাজ আদায় করুন",
+    "earlyBird": "ভোরের পাখি",
+    "earlyBirdDesc": "৭ দিন ফজরের আগে অ্যাপ ব্যবহার করুন",
+    "spreadBlessing": "বরকত ছড়ান",
+    "spreadBlessingDesc": "আপনার অগ্রগতি বন্ধুদের সাথে শেয়ার করুন"
+  },
+  
+  "common": {
+    "save": "সংরক্ষণ",
+    "cancel": "বাতিল",
+    "delete": "মুছুন",
+    "edit": "সম্পাদনা",
+    "done": "সম্পন্ন",
+    "loading": "লোড হচ্ছে...",
+    "error": "ত্রুটি",
+    "retry": "আবার চেষ্টা করুন",
+    "yes": "হ্যাঁ",
+    "no": "না",
+    "ok": "ঠিক আছে"
+  },
+  
+  "levels": {
+    "seeker": "সন্ধানী",
+    "learner": "শিক্ষার্থী",
+    "practitioner": "অনুশীলনকারী",
+    "devotee": "ভক্ত",
+    "dedicated": "নিবেদিতপ্রাণ",
+    "committed": "প্রতিশ্রুতিবদ্ধ",
+    "righteous": "সৎ",
+    "pious": "ধার্মিক",
+    "virtuous": "গুণী",
+    "enlightened": "আলোকপ্রাপ্ত"
+  },
+  
+  "about": {
+    "version": "সংস্করণ ২.০.০",
+    "description": "বাংলাদেশের জন্য তৈরি একটি অফলাইন রমজান কমপ্যানিয়ন অ্যাপ",
+    "offline": "অফলাইন",
+    "adFree": "বিজ্ঞাপন মুক্ত",
+    "privacyFirst": "গোপনীয়তা-কেন্দ্রিক"
+  }
+}
