@@ -2,21 +2,31 @@
 /// Mock implementation that provides empty streams on web platform
 
 class FlutterQiblah {
-  static Stream<QiblaDirection> qiblahStream() {
+  static Stream<QiblahDirection> get qiblahStream {
     return Stream.empty();
   }
+  
+  static Future<bool?> androidDeviceSensorSupport() async => false;
 }
 
-class QiblaDirection {
+class QiblahDirection {
   final double qibla;
   final double direction;
   final double offset;
 
-  QiblaDirection({
+  QiblahDirection({
     required this.qibla,
     required this.direction,
     required this.offset,
   });
+}
+
+// Location Permission enum
+class LocationPermission {
+  static const int denied = 0;
+  static const int deniedForever = 1;
+  static const int granted = 2;
+  static const int unknown = 3;
 }
 
 // Geolocator stubs
@@ -44,8 +54,8 @@ class Position {
 
 class Geolocator {
   static Future<bool> isLocationServiceEnabled() async => false;
-  static Future<dynamic> checkPermission() async => null;
-  static Future<dynamic> requestPermission() async => null;
+  static Future<int> checkPermission() async => LocationPermission.denied;
+  static Future<int> requestPermission() async => LocationPermission.denied;
   static Future<Position?> getCurrentPosition({dynamic desiredAccuracy}) async => null;
   static Future<Position?> getLastKnownPosition() async => null;
   static Stream<Position> getPositionStream({dynamic locationSettings}) => Stream.empty();

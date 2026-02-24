@@ -1,6 +1,14 @@
 /// Location Service Stub for Web
 /// Mock implementation that returns null on web platform
 
+// Location Permission enum
+class LocationPermission {
+  static const int denied = 0;
+  static const int deniedForever = 1;
+  static const int granted = 2;
+  static const int unknown = 3;
+}
+
 class Position {
   final double latitude;
   final double longitude;
@@ -40,13 +48,13 @@ class LocationService {
   }
 
   /// Check location permission status
-  static Future<dynamic> checkPermission() async {
-    return null;
+  static Future<int> checkPermission() async {
+    return LocationPermission.denied;
   }
 
   /// Request location permission
-  static Future<dynamic> requestPermission() async {
-    return null;
+  static Future<int> requestPermission() async {
+    return LocationPermission.denied;
   }
 
   /// Get current position (returns null on web)
@@ -104,8 +112,8 @@ class LocationService {
 // Geolocator stub
 class Geolocator {
   static Future<bool> isLocationServiceEnabled() => LocationService.isLocationServiceEnabled();
-  static Future<dynamic> checkPermission() => LocationService.checkPermission();
-  static Future<dynamic> requestPermission() => LocationService.requestPermission();
+  static Future<int> checkPermission() => LocationService.checkPermission();
+  static Future<int> requestPermission() => LocationService.requestPermission();
   static Future<Position?> getCurrentPosition({dynamic desiredAccuracy}) => LocationService.getCurrentPosition();
   static Future<Position?> getLastKnownPosition() => LocationService.getLastKnownPosition();
   static Stream<Position> getPositionStream({dynamic locationSettings}) => LocationService.getPositionStream();

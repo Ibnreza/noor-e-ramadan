@@ -29,19 +29,24 @@ void main() async {
   // Initialize Hive for local storage
   await Hive.initFlutter();
   
-  // Register Hive adapters
-  Hive.registerAdapter(PrayerTimesModelAdapter());
-  Hive.registerAdapter(TasbihSessionAdapter());
-  Hive.registerAdapter(UserSettingsAdapter());
-  Hive.registerAdapter(BadgeModelAdapter());
-  Hive.registerAdapter(DhikrTypeAdapter());
-  
-  // Open Hive boxes
-  await Hive.openBox<PrayerTimesModel>('prayer_times');
-  await Hive.openBox<TasbihSession>('tasbih_sessions');
-  await Hive.openBox<UserSettings>('user_settings');
-  await Hive.openBox<BadgeModel>('badges');
-  await Hive.openBox('fasting_streak');
+  // Register Hive adapters (mobile only - generated files not available on web)
+  try {
+    Hive.registerAdapter(PrayerTimesModelAdapter());
+    Hive.registerAdapter(TasbihSessionAdapter());
+    Hive.registerAdapter(UserSettingsAdapter());
+    Hive.registerAdapter(BadgeModelAdapter());
+    Hive.registerAdapter(DhikrTypeAdapter());
+    
+    // Open Hive boxes
+    await Hive.openBox<PrayerTimesModel>('prayer_times');
+    await Hive.openBox<TasbihSession>('tasbih_sessions');
+    await Hive.openBox<UserSettings>('user_settings');
+    await Hive.openBox<BadgeModel>('badges');
+    await Hive.openBox('fasting_streak');
+  } catch (e) {
+    // Hive adapters not available on web - this is expected
+    print('Hive initialization skipped on web: $e');
+  }
   
   // Initialize notification service (mobile only, safe to call on web)
   final notificationService = NotificationService();

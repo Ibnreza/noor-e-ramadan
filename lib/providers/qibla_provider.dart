@@ -158,13 +158,14 @@ class QiblaNotifier extends StateNotifier<QiblaState> {
       final position = await Geolocator.getCurrentPosition();
       state = state.copyWith(position: position);
 
-      // Calculate Qibla direction
-      final qiblaDirection = PrayerCalculationService.getQiblaDirection(
-        position.latitude,
-        position.longitude,
-      );
-
-      state = state.copyWith(qiblaDirection: qiblaDirection);
+      // Calculate Qibla direction if position available
+      if (position != null) {
+        final qiblaDirection = PrayerCalculationService.getQiblaDirection(
+          position.latitude,
+          position.longitude,
+        );
+        state = state.copyWith(qiblaDirection: qiblaDirection);
+      }
 
       // Listen to Qibla direction updates
       _qiblaSubscription = FlutterQiblah.qiblahStream.listen(
@@ -197,12 +198,14 @@ class QiblaNotifier extends StateNotifier<QiblaState> {
         ).listen((position) {
           state = state.copyWith(position: position);
           
-          // Recalculate Qibla direction
-          final qiblaDirection = PrayerCalculationService.getQiblaDirection(
-            position.latitude,
-            position.longitude,
-          );
-          state = state.copyWith(qiblaDirection: qiblaDirection);
+          // Recalculate Qibla direction if position not null
+          if (position != null) {
+            final qiblaDirection = PrayerCalculationService.getQiblaDirection(
+              position.latitude,
+              position.longitude,
+            );
+            state = state.copyWith(qiblaDirection: qiblaDirection);
+          }
         });
       } catch (e) {
         // Geolocator not available on web, location updates not supported
