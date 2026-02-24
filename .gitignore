@@ -9,7 +9,7 @@
 build/
 
 # Generated files
-*.g.dart
+# Note: *.g.dart files for Hive models are committed since they're build dependencies
 *.freezed.dart
 *.mocks.dart
 lib/generated/
