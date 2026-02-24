@@ -7,6 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../models/badge_model.dart';
+import '../../models/prayer_times_model.dart';
 import '../../providers/badge_provider.dart';
 import '../../providers/prayer_times_provider.dart';
 import '../../providers/settings_provider.dart';
@@ -199,7 +200,7 @@ class HomeScreen extends ConsumerWidget {
   Widget _buildCountdownCard(
     BuildContext context,
     WidgetRef ref,
-    prayerTimes,
+    PrayerTimesModel prayerTimes,
     bool isFasting,
   ) {
     final settings = ref.watch(settingsProvider);

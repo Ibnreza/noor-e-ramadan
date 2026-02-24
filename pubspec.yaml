@@ -18,8 +18,7 @@ dependencies:
   hive_flutter: ^1.1.0
   hive: ^2.2.3
   
-  adhan: any 
-  
+  adhan_dart: ^1.2.0
   # Downgraded flutter_qiblah to 3.1.0+1 to work with geolocator 13.x
   flutter_qiblah: ^3.1.0+1
   
@@ -30,6 +29,7 @@ dependencies:
   confetti: ^0.8.0
   
   intl: any 
+  timezone: ^0.9.0
   
   google_fonts: ^6.2.1
   flutter_animate: ^4.5.2
@@ -41,3 +41,10 @@ dependencies:
   device_info_plus: ^11.2.0
   package_info_plus: ^8.1.2
   url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^2.4.6
+  hive_generator: ^2.0.1
+  riverpod_generator: ^2.4.0

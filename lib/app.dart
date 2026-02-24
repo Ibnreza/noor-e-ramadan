@@ -93,7 +93,7 @@ class NoorRamadanApp extends ConsumerWidget {
       ),
       
       // Card Theme
-      cardTheme: CardTheme(
+      cardTheme: CardThemeData(
         elevation: 0,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
@@ -277,11 +277,6 @@ class NoorRamadanApp extends ConsumerWidget {
           fontSize: 12,
           fontWeight: FontWeight.w500,
           color: Colors.white70,
-        ),
-        selectedLabelStyle: GoogleFonts.inter(
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
-          color: const Color(0xFF0A0F1E),
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(20),

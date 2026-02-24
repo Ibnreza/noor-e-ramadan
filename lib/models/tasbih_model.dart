@@ -200,7 +200,7 @@ extension DhikrTypeExtension on DhikrType {
       case DhikrType.salawat:
         return 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদ';
       case DhikrType.hasbunallahu:
-        return 'হাসবুনাল্লাহু ওয়া নি'মাল ওয়াকীল';
+        return 'হাসবুনাল্লাহু ওয়া নি\'মাল ওয়াকীল';
       case DhikrType.bismillah:
         return 'বিসমিল্লাহ';
       case DhikrType.laHawla:

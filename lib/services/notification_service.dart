@@ -3,6 +3,7 @@
 /// Uses flutter_local_notifications package
 /// No audio - only vibration as per requirements
 
+import 'dart:typed_data';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:timezone/timezone.dart' as tz;
 import 'package:timezone/data/latest.dart' as tz_data;
@@ -62,39 +63,39 @@ class NotificationService {
     if (androidPlugin != null) {
       // Prayer time channel
       await androidPlugin.createNotificationChannel(
-        const AndroidNotificationChannel(
+        AndroidNotificationChannel(
           'prayer_times',
           'Prayer Times',
           description: 'Notifications for prayer times',
           importance: Importance.high,
           enableVibration: true,
-          vibrationPattern: [0, 500, 200, 500],
+          vibrationPattern: Int64List.fromList([0, 500, 200, 500]),
           playSound: false,
         ),
       );
 
       // Pre-prayer reminder channel
       await androidPlugin.createNotificationChannel(
-        const AndroidNotificationChannel(
+        AndroidNotificationChannel(
           'pre_prayer_reminders',
           'Pre-Prayer Reminders',
           description: 'Reminders before prayer times',
           importance: Importance.high,
           enableVibration: true,
-          vibrationPattern: [0, 300, 100, 300],
+          vibrationPattern: Int64List.fromList([0, 300, 100, 300]),
           playSound: false,
         ),
       );
 
       // Fasting channel
       await androidPlugin.createNotificationChannel(
-        const AndroidNotificationChannel(
+        AndroidNotificationChannel(
           'fasting_notifications',
           'Fasting Notifications',
           description: 'Suhoor and Iftar notifications',
           importance: Importance.high,
           enableVibration: true,
-          vibrationPattern: [0, 400, 200, 400, 200, 400],
+          vibrationPattern: Int64List.fromList([0, 400, 200, 400, 200, 400]),
           playSound: false,
         ),
       );
@@ -113,7 +114,6 @@ class NotificationService {
     }
   }
 
-  /// Handle notification tap
   void _onNotificationTap(NotificationResponse response) {
     // Handle notification tap - can navigate to specific screens
     final payload = response.payload;
@@ -212,6 +212,7 @@ class NotificationService {
       tz.TZDateTime.from(scheduledDate, tz.local),
       details,
       androidScheduleMode: AndroidScheduleMode.exactAllowWhileIdle,
+      uiLocalNotificationDateInterpretation: UILocalNotificationDateInterpretation.absoluteTime,
       payload: payload,
     );
   }
@@ -445,17 +446,14 @@ class NotificationService {
   }
 
   /// Get vibration pattern
-  List<int> _getVibrationPattern(String channelId) {
-    switch (channelId) {
-      case 'prayer_times':
-        return [0, 500, 200, 500];
-      case 'pre_prayer_reminders':
-        return [0, 300, 100, 300];
-      case 'fasting_notifications':
-        return [0, 400, 200, 400, 200, 400];
-      default:
-        return [0, 300];
-    }
+  Int64List _getVibrationPattern(String channelId) {
+    final pattern = switch (channelId) {
+      'prayer_times' => [0, 500, 200, 500],
+      'pre_prayer_reminders' => [0, 300, 100, 300],
+      'fasting_notifications' => [0, 400, 200, 400, 200, 400],
+      _ => [0, 300],
+    };
+    return Int64List.fromList(pattern);
   }
 
   /// Get notification ID for prayer

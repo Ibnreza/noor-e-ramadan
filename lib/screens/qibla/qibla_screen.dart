@@ -1,7 +1,7 @@
 /// Qibla Compass Screen
 /// Animated Qibla direction compass using flutter_qiblah
 
-import 'dart:math' show pi;
+import 'dart:math' show pi, sin, cos;
 
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';

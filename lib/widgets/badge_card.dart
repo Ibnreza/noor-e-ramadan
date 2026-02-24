@@ -21,7 +21,7 @@ class BadgeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final rarityColor = Color(int.parse('0xFF${badge.rarityColor.substring(1]}'));
+    final rarityColor = Color(int.parse('0xFF${badge.rarityColor.substring(1)}'));
 
     if (compact) {
       return Container(
