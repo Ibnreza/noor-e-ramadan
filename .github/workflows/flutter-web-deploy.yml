@@ -1,0 +1,38 @@
+name: Build and Deploy Flutter Web to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Trigger the workflow when pushing to the main branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Use an Ubuntu environment to build
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2  # Checkout the code from GitHub
+
+    - name: Set up Flutter
+      uses: subosito/flutter-action@v2
+      with:
+        flutter-version: '3.27.0'  # Specify the Flutter version
+
+    - name: Install dependencies
+      run: flutter pub get  # Get the Flutter dependencies
+
+    - name: Build Flutter Web
+      run: flutter build web --release  # Build the Flutter web app
+
+    - name: Deploy to GitHub Pages
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "github-actions@github.com"
+        git remote set-url origin https://github.com/${{ github.repository }}
+        git fetch --all
+        git checkout gh-pages  # Ensure we're on the gh-pages branch
+        rm -rf *  # Remove previous build artifacts
+        cp -R build/web/* .  # Copy the new build to the gh-pages branch
+        git add .  # Stage changes
+        git commit -m "Deploy Flutter web app"  # Commit changes
+        git push origin gh-pages  # Push to GitHub Pages
