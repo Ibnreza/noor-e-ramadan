@@ -35,4 +35,4 @@ jobs:
         cp -R build/web/* .  # Copy the new build to the gh-pages branch
         git add .  # Stage changes
         git commit -m "Deploy Flutter web app"  # Commit changes
-        git push origin gh-pages  # Push to GitHub Pages
+        git push origin gh-pages  # Push to GitHub Pages.
