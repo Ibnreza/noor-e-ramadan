@@ -312,7 +312,6 @@ class PrayerCalculationService {
     // The adhan_dart Qibla class handles calculation internally
     // For now, return a calculated value based on coordinates
     // In production, this should use the actual Qibla calculation
-    final coordinates = Coordinates(latitude, longitude);
     
     // Simple calculation: Qibla direction from coordinates
     // Using approximate formula for qibla direction

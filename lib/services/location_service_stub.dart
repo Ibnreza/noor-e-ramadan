@@ -16,6 +16,21 @@ class LocationException implements Exception {
   String toString() => message;
 }
 
+class LocationAccuracy {
+  static const dynamic high = 'high';
+  static const dynamic low = 'low';
+}
+
+class LocationSettings {
+  final dynamic accuracy;
+  final int distanceFilter;
+  
+  const LocationSettings({
+    this.accuracy,
+    this.distanceFilter = 10,
+  });
+}
+
 class LocationService {
   static const String _boxName = 'user_settings';
   
@@ -25,12 +40,12 @@ class LocationService {
   }
 
   /// Check location permission status
-  static Future<Object> checkPermission() async {
+  static Future<dynamic> checkPermission() async {
     return null;
   }
 
   /// Request location permission
-  static Future<Object> requestPermission() async {
+  static Future<dynamic> requestPermission() async {
     return null;
   }
 
@@ -46,7 +61,7 @@ class LocationService {
 
   /// Get position stream for real-time updates (empty on web)
   static Stream<Position> getPositionStream({
-    Object accuracy = 0,
+    dynamic accuracy,
     int distanceFilter = 10,
   }) {
     return Stream.empty();
@@ -84,4 +99,14 @@ class LocationService {
   static Future<List<Position>> batchGeocode(List<String> addresses) async {
     return [];
   }
+}
+
+// Geolocator stub
+class Geolocator {
+  static Future<bool> isLocationServiceEnabled() => LocationService.isLocationServiceEnabled();
+  static Future<dynamic> checkPermission() => LocationService.checkPermission();
+  static Future<dynamic> requestPermission() => LocationService.requestPermission();
+  static Future<Position?> getCurrentPosition({dynamic desiredAccuracy}) => LocationService.getCurrentPosition();
+  static Future<Position?> getLastKnownPosition() => LocationService.getLastKnownPosition();
+  static Stream<Position> getPositionStream({dynamic locationSettings}) => LocationService.getPositionStream();
 }

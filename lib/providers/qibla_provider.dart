@@ -188,21 +188,26 @@ class QiblaNotifier extends StateNotifier<QiblaState> {
       );
 
       // Also listen to location updates
-      _locationSubscription = Geolocator.getPositionStream(
-        locationSettings: const LocationSettings(
-          accuracy: LocationAccuracy.high,
-          distanceFilter: 100,
-        ),
-      ).listen((position) {
-        state = state.copyWith(position: position);
-        
-        // Recalculate Qibla direction
-        final qiblaDirection = PrayerCalculationService.getQiblaDirection(
-          position.latitude,
-          position.longitude,
-        );
-        state = state.copyWith(qiblaDirection: qiblaDirection);
-      });
+      try {
+        _locationSubscription = Geolocator.getPositionStream(
+          locationSettings: const LocationSettings(
+            accuracy: LocationAccuracy.high,
+            distanceFilter: 100,
+          ),
+        ).listen((position) {
+          state = state.copyWith(position: position);
+          
+          // Recalculate Qibla direction
+          final qiblaDirection = PrayerCalculationService.getQiblaDirection(
+            position.latitude,
+            position.longitude,
+          );
+          state = state.copyWith(qiblaDirection: qiblaDirection);
+        });
+      } catch (e) {
+        // Geolocator not available on web, location updates not supported
+        print('Location updates not available: $e');
+      }
     } catch (e) {
       state = state.copyWith(
         isLoading: false,

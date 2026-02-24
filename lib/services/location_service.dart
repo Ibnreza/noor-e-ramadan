@@ -65,15 +65,21 @@ class LocationService {
 
   /// Get position stream for real-time updates
   static Stream<Position> getPositionStream({
-    LocationAccuracy accuracy = LocationAccuracy.high,
+    dynamic accuracy,
     int distanceFilter = 10, // meters
   }) {
-    return Geolocator.getPositionStream(
-      locationSettings: LocationSettings(
-        accuracy: accuracy,
-        distanceFilter: distanceFilter,
-      ),
-    );
+    // Return position stream from geolocator if available
+    try {
+      return Geolocator.getPositionStream(
+        locationSettings: LocationSettings(
+          accuracy: accuracy ?? LocationAccuracy.high,
+          distanceFilter: distanceFilter,
+        ),
+      );
+    } catch (e) {
+      // Return empty stream on web or if geolocator not available
+      return Stream.empty();
+    }
   }
 
   /// Get address from coordinates (simplified)
