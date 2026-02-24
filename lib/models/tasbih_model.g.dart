@@ -2,37 +2,6 @@
 
 part of 'tasbih_model.dart';
 
-// Stub Hive adapter for web compatibility
-class TasbihSessionAdapter extends TypeAdapter<TasbihSession> {
-  @override
-  final typeId = 2;
-
-  @override
-  TasbihSession read(BinaryReader reader) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-
-  @override
-  void write(BinaryWriter writer, TasbihSession obj) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-}
-
-class DhikrTypeAdapter extends TypeAdapter<DhikrType> {
-  @override
-  final typeId = 4;
-
-  @override
-  DhikrType read(BinaryReader reader) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-
-  @override
-  void write(BinaryWriter writer, DhikrType obj) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-}
-
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************

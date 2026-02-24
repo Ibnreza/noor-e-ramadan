@@ -2,22 +2,6 @@
 
 part of 'prayer_times_model.dart';
 
-// Stub Hive adapter for web compatibility
-class PrayerTimesModelAdapter extends TypeAdapter<PrayerTimesModel> {
-  @override
-  final typeId = 1;
-
-  @override
-  PrayerTimesModel read(BinaryReader reader) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-
-  @override
-  void write(BinaryWriter writer, PrayerTimesModel obj) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-}
-
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************

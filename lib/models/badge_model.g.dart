@@ -2,22 +2,6 @@
 
 part of 'badge_model.dart';
 
-// Stub Hive adapter for web compatibility
-class BadgeModelAdapter extends TypeAdapter<BadgeModel> {
-  @override
-  final typeId = 6;
-
-  @override
-  BadgeModel read(BinaryReader reader) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-
-  @override
-  void write(BinaryWriter writer, BadgeModel obj) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-}
-
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************

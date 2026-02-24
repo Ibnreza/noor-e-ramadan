@@ -2,22 +2,6 @@
 
 part of 'user_settings_model.dart';
 
-// Stub Hive adapter for web compatibility
-class UserSettingsAdapter extends TypeAdapter<UserSettings> {
-  @override
-  final typeId = 3;
-
-  @override
-  UserSettings read(BinaryReader reader) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-
-  @override
-  void write(BinaryWriter writer, UserSettings obj) {
-    throw UnsupportedError('Hive persistence not supported on web');
-  }
-}
-
 // **************************************************************************
 // TypeAdapterGenerator
 // **************************************************************************
