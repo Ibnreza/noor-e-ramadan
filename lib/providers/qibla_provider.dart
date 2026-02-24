@@ -171,7 +171,7 @@ class QiblaNotifier extends StateNotifier<QiblaState> {
       _qiblaSubscription = FlutterQiblah.qiblahStream.listen(
         (qiblahDirection) {
           final deviceDirection = qiblahDirection.direction;
-          final offset = qiblahDirection.qiblah;
+          final offset = qiblahDirection.qibla;
 
           state = state.copyWith(
             isLoading: false,
