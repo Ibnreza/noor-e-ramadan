@@ -3,7 +3,7 @@
 /// Supports multiple methods for Bangladesh
 
 import 'dart:math';
-import 'package:geolocator/geolocator.dart';
+import 'package:geolocator/geolocator.dart' if (dart.library.html) 'location_service_stub.dart' as geolocator_platform;
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
 

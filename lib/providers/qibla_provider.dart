@@ -5,8 +5,8 @@ import 'dart:async';
 import 'dart:math' show pi, atan2, cos, sin;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_qiblah/flutter_qiblah.dart';
-import 'package:geolocator/geolocator.dart';
+import 'package:flutter_qiblah/flutter_qiblah.dart' if (dart.library.html) 'qibla_provider_stub.dart';
+import 'package:geolocator/geolocator.dart' if (dart.library.html) '../services/location_service_stub.dart' as geolocator_platform;
 
 import '../services/prayer_calculation_service.dart';
 import 'settings_provider.dart';

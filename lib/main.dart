@@ -21,7 +21,7 @@ import 'models/prayer_times_model.dart';
 import 'models/tasbih_model.dart';
 import 'models/user_settings_model.dart';
 import 'models/badge_model.dart';
-import 'services/notification_service.dart';
+import 'services/notification_service.dart' if (dart.library.html) 'services/notification_service_stub.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -43,9 +43,14 @@ void main() async {
   await Hive.openBox<BadgeModel>('badges');
   await Hive.openBox('fasting_streak');
   
-  // Initialize notification service
+  // Initialize notification service (mobile only, safe to call on web)
   final notificationService = NotificationService();
-  await notificationService.initialize();
+  try {
+    await notificationService.initialize();
+  } catch (e) {
+    // Notification service not available on web, which is expected
+    print('Notification service not available: $e');
+  }
   
   // Set preferred orientations
   await SystemChrome.setPreferredOrientations([

@@ -1,8 +1,8 @@
 /// Location Service
 /// Handles geolocation for prayer time calculations
-/// Uses geolocator package
+/// Uses geolocator package (mobile-only)
 
-import 'package:geolocator/geolocator.dart';
+import 'package:geolocator/geolocator.dart' if (dart.library.html) 'location_service_stub.dart' as geolocator_platform;
 import 'package:hive/hive.dart';
 
 import '../models/user_settings_model.dart';
