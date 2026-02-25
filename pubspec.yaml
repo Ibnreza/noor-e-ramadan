@@ -20,7 +20,7 @@ dependencies:
   
   adhan_dart: ^1.2.0
   # Downgraded flutter_qiblah to 3.1.0+1 to work with geolocator 13.x
-  flutter_qiblah: ^3.1.0+1
+  # flutter_qiblah: ^3.1.0+1   # disabled for web build (Qibla works on Android/iOS)
   
   fl_chart: ^0.70.0
   geolocator: ^13.0.4
