@@ -23,7 +23,7 @@ dependencies:
   flutter_qiblah: ^3.1.0+1
   
   fl_chart: ^0.70.0
-  geolocator: ^12.0.3
+  geolocator: ^13.0.4
   flutter_local_notifications: ^18.0.1
   vibration: ^3.1.2
   confetti: ^0.8.0
