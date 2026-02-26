@@ -1,0 +1,49 @@
+stages:
+  - validate
+  - build
+  - deploy
+
+variables:
+  FLUTTER_VERSION: "3.27.0"
+  PUB_CACHE: "$CI_PROJECT_DIR/.pub-cache"
+
+cache:
+  key: "$CI_COMMIT_REF_SLUG"
+  paths:
+    - .pub-cache/
+
+.default_flutter_job:
+  image: ghcr.io/cirruslabs/flutter:${FLUTTER_VERSION}
+  before_script:
+    - flutter --version
+    - flutter config --enable-web
+    - flutter pub get
+
+analyze:
+  stage: validate
+  extends: .default_flutter_job
+  script:
+    - flutter analyze
+
+build_web:
+  stage: build
+  extends: .default_flutter_job
+  script:
+    - flutter build web --release --base-href /
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - build/web
+
+pages:
+  stage: deploy
+  needs:
+    - job: build_web
+      artifacts: true
+  script:
+    - cp -r build/web public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
