@@ -14,4 +14,10 @@ export PATH="$FLUTTER_DIR/bin:$PATH"
 flutter --version
 flutter config --enable-web
 flutter pub get
-flutter build web --release --base-href / --no-wasm-dry-run
+
+build_args=(web --release --base-href /)
+if flutter build web -h | grep -q -- '--no-wasm-dry-run'; then
+  build_args+=(--no-wasm-dry-run)
+fi
+
+flutter build "${build_args[@]}"
