@@ -10,6 +10,8 @@ import '../models/user_settings_model.dart';
 import '../services/prayer_calculation_service.dart';
 import 'settings_provider.dart';
 
+final Object _unset = Object();
+
 /// Prayer times state
 class PrayerTimesState {
   final PrayerTimesModel? todayPrayerTimes;
@@ -29,19 +31,25 @@ class PrayerTimesState {
   }) : lastUpdated = lastUpdated ?? DateTime.now();
 
   PrayerTimesState copyWith({
-    PrayerTimesModel? todayPrayerTimes,
-    PrayerTimesModel? tomorrowPrayerTimes,
-    List<PrayerTimesModel>? monthPrayerTimes,
+    Object? todayPrayerTimes = _unset,
+    Object? tomorrowPrayerTimes = _unset,
+    Object? monthPrayerTimes = _unset,
     bool? isLoading,
-    String? error,
+    Object? error = _unset,
     DateTime? lastUpdated,
   }) {
     return PrayerTimesState(
-      todayPrayerTimes: todayPrayerTimes ?? this.todayPrayerTimes,
-      tomorrowPrayerTimes: tomorrowPrayerTimes ?? this.tomorrowPrayerTimes,
-      monthPrayerTimes: monthPrayerTimes ?? this.monthPrayerTimes,
+      todayPrayerTimes: identical(todayPrayerTimes, _unset)
+          ? this.todayPrayerTimes
+          : todayPrayerTimes as PrayerTimesModel?,
+      tomorrowPrayerTimes: identical(tomorrowPrayerTimes, _unset)
+          ? this.tomorrowPrayerTimes
+          : tomorrowPrayerTimes as PrayerTimesModel?,
+      monthPrayerTimes: identical(monthPrayerTimes, _unset)
+          ? this.monthPrayerTimes
+          : monthPrayerTimes as List<PrayerTimesModel>?,
       isLoading: isLoading ?? this.isLoading,
-      error: error ?? this.error,
+      error: identical(error, _unset) ? this.error : error as String?,
       lastUpdated: lastUpdated ?? this.lastUpdated,
     );
   }

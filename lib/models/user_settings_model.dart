@@ -3,6 +3,8 @@
 
 import 'package:hive/hive.dart';
 
+final Object _unset = Object();
+
 part 'user_settings_model.g.dart';
 
 @HiveType(typeId: 3)
@@ -219,13 +221,13 @@ class UserSettings extends HiveObject {
     bool? showArabicInPrayerTimes,
     bool? showTransliteration,
     bool? hasCompletedOnboarding,
-    DateTime? firstLaunchDate,
+    Object? firstLaunchDate = _unset,
     String? themeMode,
     int? ramadanYear,
     int? ramadanDay,
     int? currentStreak,
     int? longestStreak,
-    DateTime? lastFastingDate,
+    Object? lastFastingDate = _unset,
     int? totalFastDays,
     bool? enableTasbihHaptics,
     bool? enableTasbihSound,
@@ -252,13 +254,13 @@ class UserSettings extends HiveObject {
       showArabicInPrayerTimes: showArabicInPrayerTimes ?? this.showArabicInPrayerTimes,
       showTransliteration: showTransliteration ?? this.showTransliteration,
       hasCompletedOnboarding: hasCompletedOnboarding ?? this.hasCompletedOnboarding,
-      firstLaunchDate: firstLaunchDate ?? this.firstLaunchDate,
+      firstLaunchDate: identical(firstLaunchDate, _unset) ? this.firstLaunchDate : firstLaunchDate as DateTime?,
       themeMode: themeMode ?? this.themeMode,
       ramadanYear: ramadanYear ?? this.ramadanYear,
       ramadanDay: ramadanDay ?? this.ramadanDay,
       currentStreak: currentStreak ?? this.currentStreak,
       longestStreak: longestStreak ?? this.longestStreak,
-      lastFastingDate: lastFastingDate ?? this.lastFastingDate,
+      lastFastingDate: identical(lastFastingDate, _unset) ? this.lastFastingDate : lastFastingDate as DateTime?,
       totalFastDays: totalFastDays ?? this.totalFastDays,
       enableTasbihHaptics: enableTasbihHaptics ?? this.enableTasbihHaptics,
       enableTasbihSound: enableTasbihSound ?? this.enableTasbihSound,

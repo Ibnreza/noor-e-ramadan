@@ -6,10 +6,12 @@ import 'dart:math' show pi, atan2, cos, sin;
 
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_qiblah/flutter_qiblah.dart' if (dart.library.html) 'qibla_provider_stub.dart';
-import 'package:geolocator/geolocator.dart' if (dart.library.html) '../services/location_service_stub.dart' as geolocator_platform;
+import 'package:geolocator/geolocator.dart' if (dart.library.html) '../services/location_service_stub.dart';
 
 import '../services/prayer_calculation_service.dart';
 import 'settings_provider.dart';
+
+final Object _unset = Object();
 
 /// Qibla state
 class QiblaState {
@@ -37,21 +39,27 @@ class QiblaState {
     bool? isLoading,
     bool? hasPermission,
     bool? isSupported,
-    double? qiblaDirection,
-    double? deviceDirection,
-    double? offset,
-    String? error,
-    Position? position,
+    Object? qiblaDirection = _unset,
+    Object? deviceDirection = _unset,
+    Object? offset = _unset,
+    Object? error = _unset,
+    Object? position = _unset,
   }) {
     return QiblaState(
       isLoading: isLoading ?? this.isLoading,
       hasPermission: hasPermission ?? this.hasPermission,
       isSupported: isSupported ?? this.isSupported,
-      qiblaDirection: qiblaDirection ?? this.qiblaDirection,
-      deviceDirection: deviceDirection ?? this.deviceDirection,
-      offset: offset ?? this.offset,
-      error: error ?? this.error,
-      position: position ?? this.position,
+      qiblaDirection: identical(qiblaDirection, _unset)
+          ? this.qiblaDirection
+          : qiblaDirection as double?,
+      deviceDirection: identical(deviceDirection, _unset)
+          ? this.deviceDirection
+          : deviceDirection as double?,
+      offset: identical(offset, _unset) ? this.offset : offset as double?,
+      error: identical(error, _unset) ? this.error : error as String?,
+      position: identical(position, _unset)
+          ? this.position
+          : position as Position?,
     );
   }
 
