@@ -25,4 +25,4 @@ jobs:
         run: flutter analyze
 
       - name: Build Web App
-        run: flutter build web --release --base-href /
+        run: flutter build web --release --base-href "/${{ github.event.repository.name }}/"
