@@ -8,6 +8,8 @@ import '../models/badge_model.dart';
 import '../models/user_settings_model.dart';
 import 'settings_provider.dart';
 
+const Object _unset = Object();
+
 /// Badge state
 class BadgeState {
   final List<BadgeModel> allBadges;
@@ -28,15 +30,17 @@ class BadgeState {
     List<BadgeModel>? allBadges,
     List<String>? unlockedIds,
     bool? isLoading,
-    String? error,
-    BadgeModel? newlyUnlocked,
+    Object? error = _unset,
+    Object? newlyUnlocked = _unset,
   }) {
     return BadgeState(
       allBadges: allBadges ?? this.allBadges,
       unlockedIds: unlockedIds ?? this.unlockedIds,
       isLoading: isLoading ?? this.isLoading,
-      error: error ?? this.error,
-      newlyUnlocked: newlyUnlocked ?? this.newlyUnlocked,
+      error: identical(error, _unset) ? this.error : error as String?,
+      newlyUnlocked: identical(newlyUnlocked, _unset)
+          ? this.newlyUnlocked
+          : newlyUnlocked as BadgeModel?,
     );
   }
 

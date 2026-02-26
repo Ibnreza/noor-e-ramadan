@@ -10,6 +10,8 @@ import 'package:hive/hive.dart';
 import '../models/tasbih_model.dart';
 import 'settings_provider.dart';
 
+const Object _unset = Object();
+
 /// Tasbih state
 class TasbihState {
   final TasbihSession? currentSession;
@@ -33,24 +35,28 @@ class TasbihState {
   });
 
   TasbihState copyWith({
-    TasbihSession? currentSession,
+    Object? currentSession = _unset,
     DhikrType? selectedDhikr,
     int? count,
     int? targetCount,
     bool? isActive,
     bool? showConfetti,
     List<TasbihSession>? todaySessions,
-    DailyTasbihSummary? todaySummary,
+    Object? todaySummary = _unset,
   }) {
     return TasbihState(
-      currentSession: currentSession ?? this.currentSession,
+      currentSession: identical(currentSession, _unset)
+          ? this.currentSession
+          : currentSession as TasbihSession?,
       selectedDhikr: selectedDhikr ?? this.selectedDhikr,
       count: count ?? this.count,
       targetCount: targetCount ?? this.targetCount,
       isActive: isActive ?? this.isActive,
       showConfetti: showConfetti ?? this.showConfetti,
       todaySessions: todaySessions ?? this.todaySessions,
-      todaySummary: todaySummary ?? this.todaySummary,
+      todaySummary: identical(todaySummary, _unset)
+          ? this.todaySummary
+          : todaySummary as DailyTasbihSummary?,
     );
   }
 
